@@ -146,6 +146,8 @@ class PlayState extends MusicBeatState
 					SONG.stage = 'schoolEvil';
 				case 'ugh' | 'guns' | 'stress':
 					SONG.stage = 'tank';
+				case 'bruh' | 'obama' | 'negar':
+					SONG.stage = 'tank';
 				default:
 					SONG.stage = 'stage';
 			}
