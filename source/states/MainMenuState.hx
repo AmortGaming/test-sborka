@@ -24,6 +24,9 @@ class MainMenuState extends MusicBeatState
 	private final optionShit:Array<String> = [
 		'story mode',
 		'freeplay',
+		#if FUTURE_POLYMOD
+		'mods',
+		#end
 		'credits',
 		'options'
 	];
@@ -140,7 +143,7 @@ class MainMenuState extends MusicBeatState
 			else if (controls.ACCEPT)
 			{
 				if (optionShit[curSelected] == 'credits')
-					Main.toast.create('bruh!', 0xFFFF0000, 'Not Maded Menu!');
+					Main.toast.create('Alert!', 0xFFFF0000, 'Not Maded Menu!');
 				else
 				{
 					selectedSomething = true;
@@ -201,7 +204,14 @@ class MainMenuState extends MusicBeatState
 				MusicBeatState.switchState(new StoryMenuState());
 			case 'freeplay':
 				MusicBeatState.switchState(new FreeplayState());
-			case 'options'
+			#if FUTURE_POLYMOD
+			case 'mods':
+				if (ModCore.trackedMods != [])
+					MusicBeatState.switchState(new ModsMenuState());
+				else
+					Main.toast.create('No Mods Installed!', 0xFFFFFF00, 'Please add mods to be able to access the menu!');
+			#end
+			case 'options':
 				MusicBeatState.switchState(new OptionsState());
 		}
 	}
