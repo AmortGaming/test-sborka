@@ -24,9 +24,6 @@ class MainMenuState extends MusicBeatState
 	private final optionShit:Array<String> = [
 		'story mode',
 		'freeplay',
-		#if FUTURE_POLYMOD
-		'mods',
-		#end
 		'credits',
 		'options'
 	];
