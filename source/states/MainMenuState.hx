@@ -140,7 +140,7 @@ class MainMenuState extends MusicBeatState
 			else if (controls.ACCEPT)
 			{
 				if (optionShit[curSelected] == 'credits')
-					Main.toast.create('very bruh'!', 0xFFFF0000, 'o'!');
+					Main.toast.create('Alert!', 0xFFFF0000, 'Not Maded Menu!');
 				else
 				{
 					selectedSomething = true;
