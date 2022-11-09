@@ -21,8 +21,6 @@ class PauseSubState extends MusicBeatSubstate
 		'Resume',
 		'Restart Song',
 		'Change Difficulty',
-		'Toggle Practice Mode',
-		'Toggle Auto-Play Mode',
 		'Chart Editor',
 		'Options',
 		'Quit'
