@@ -14,7 +14,7 @@ class PreferencesSubState extends BaseOptionsSubState
 		addOption(new Option('Centered Note-Field', 'if enabled, moves the scroll to the middle.', 'centeredNotes', 'bool', false));
 		addOption(new Option('Note Splashes', 'If disabled, no splashes will appear on sick note presses.', 'noteSplashes', 'bool', true));
 
-		var option:Option = new Option('Overlay', 'If enabled, shows an overlay with fps and memory info.', 'overlay', 'bool', false);
+		var option:Option = new Option('fps and memory', 'If enabled, shows an overlay with fps and memory info.', 'fps and memory', 'bool', false);
 		option.onChange = function()
 		{
 			if (Main.overlay != null)
@@ -41,7 +41,6 @@ class PreferencesSubState extends BaseOptionsSubState
 		option.maxValue = 10;
 		addOption(option);
 
-		addOption(new Option('Check For Updates', 'If disabled, stops checking for updates.', 'checkForUpdates', 'bool', true));
 		addOption(new Option('Antialiasing', 'If disabled, disables antialiasing, increases perfomance \nat the cost of graphics quality.', 'antialiasing', 'bool', true));
 		addOption(new Option('Flashing', 'If disabled, disables all flashing from the engine.', 'flashing', 'bool', true));
 
