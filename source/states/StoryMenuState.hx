@@ -69,8 +69,8 @@ class StoryMenuState extends MusicBeatState
 				loadedWeeks.push(weekFile);
 				loadedWeekList.push(Week.weeksList[i]);
 
-				var weekThing:StoryItem = new StoryItem(0, 466, Week.weeksList[i]);
-				weekThing.y += ((weekThing.height + 20) * i);
+				var weekThing:StoryItem = new StoryItem(1, -100, Week.weeksList[i]);
+				weekThing.y += ((weekThing.height + 10) * i);
 				weekThing.targetY = i;
 				weekThing.screenCenter(X);
 				grpWeekText.add(weekThing);
@@ -149,12 +149,12 @@ class StoryMenuState extends MusicBeatState
 
 	override function update(elapsed:Float)
 	{
-		lerpScore = Math.floor(FlxMath.lerp(lerpScore, intendedScore, 0.5));
+		lerpScore = Math.floor(FlxMath.lerp(lerpScore, intendedScore, 0.8));
 
 		scoreText.text = "WEEK BRUH:" + lerpScore;
 
 		txtWeekTitle.text = loadedWeeks[curWeek].name.toUpperCase();
-		txtWeekTitle.x = FlxG.width - (txtWeekTitle.width + 10);
+		txtWeekTitle.x = FlxG.width - (txtWeekTitle.width + 5);
 
 		difficultySelectors.visible = !weekIsLocked(loadedWeekList[curWeek]);
 
@@ -167,26 +167,26 @@ class StoryMenuState extends MusicBeatState
 		{
 			if (!selectedWeek)
 			{
-				if (controls.UI_UP_P)
+				if ((controls.UI_RIGHT_P))
 					changeWeek(-1);
-				else if (controls.UI_DOWN_P)
+				else if controls.UI_LEFT_P))
 					changeWeek(1);
 				else if (FlxG.mouse.wheel != 0)
 					changeWeek(-FlxG.mouse.wheel);
 
-				if (controls.UI_RIGHT)
+				if (ccontrols.UI_UP)
 					rightArrow.animation.play('press')
 				else
 					rightArrow.animation.play('idle');
 
-				if (controls.UI_LEFT)
+				if ((controls.UI_DOWN)
 					leftArrow.animation.play('press');
 				else
 					leftArrow.animation.play('idle');
 
-				if (controls.UI_RIGHT_P)
+				if (controls.UI_UP_P)
 					changeDifficulty(1);
-				else if (controls.UI_LEFT_P)
+				else if ((controls.UI_DOWN_P)
 					changeDifficulty(-1);
 			}
 
@@ -299,7 +299,7 @@ class StoryMenuState extends MusicBeatState
 			if (item.targetY == 0 && !weekIsLocked(loadedWeekList[curWeek]))
 				item.alpha = 1;
 			else
-				item.alpha = 0.6;
+				item.alpha = 0.4;
 			bullShit++;
 		}
 
@@ -329,7 +329,7 @@ class StoryMenuState extends MusicBeatState
 
 		txtTracklist.text = txtTracklist.text.toUpperCase();
 		txtTracklist.screenCenter(X);
-		txtTracklist.x -= FlxG.width * 0.35;
+		txtTracklist.x -= FlxG.width * 0.25;
 		txtTracklist.text += "\n";
 
 		intendedScore = HighScore.getWeekScore(loadedWeekList[curWeek], curDifficulty).score;
