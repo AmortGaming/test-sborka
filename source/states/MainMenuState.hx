@@ -91,31 +91,7 @@ class MainMenuState extends MusicBeatState
 			menuItem.ID = i;
 			menuItems.add(menuItem);
 		}
-  var gfDance:FlxSprite;      //to put the gf on the menu mme
 
-var danceLeft:Bool = false;
-
-//Gf Main Menu
-
-gfDance = new FlxSprite(FlxG.width * 0.4, FlxG.height * 0.07);
-
-gfDance.frames = Paths.getSparrowAtlas('gfDanceTitle');
-
-gfDance.animation.addByIndices('danceLeft', 'gfDance', [30, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29], "", 24, true);
-
-add(gfDance);
-
-if(gfDance != null) {
-
-danceLeft = !danceLeft;
-
-
-
-if (danceLeft)
-
-gfDance.animation.play('danceLeft');
-
-}
 		FlxG.camera.follow(camFollow, null, 0.60);
 
 		var versionShit:FlxText = new FlxText(5, FlxG.height
@@ -164,7 +140,7 @@ gfDance.animation.play('danceLeft');
 			else if (controls.ACCEPT)
 			{
 				if (optionShit[curSelected] == 'credits')
-					Main.toast.create('very bruh'!', 0xFFFF0000, 'obama'!');
+					Main.toast.create('very bruh'!', 0xFFFF0000, 'o'!');
 				else
 				{
 					selectedSomething = true;
