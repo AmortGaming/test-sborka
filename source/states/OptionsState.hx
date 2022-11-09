@@ -17,6 +17,7 @@ class OptionsState extends MusicBeatState
 	private final options:Array<String> = [
 		'Preferences',
 		'Mobile Controls',
+	        'sus settings',
 		'Exit'
 	];
 
