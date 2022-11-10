@@ -72,7 +72,7 @@ class StoryMenuState extends MusicBeatState
 				var weekThing:StoryItem = new StoryItem(1, -100, Week.weeksList[i]);
 				weekThing.y += ((weekThing.height + 10) * i);
 				weekThing.targetY = i;
-				weekThing.screenCenter(X);
+				weekThing.x += 750;
 				grpWeekText.add(weekThing);
 
 				if (isLocked)
@@ -299,7 +299,7 @@ class StoryMenuState extends MusicBeatState
 			if (item.targetY == 0 && !weekIsLocked(loadedWeekList[curWeek]))
 				item.alpha = 1;
 			else
-				item.alpha = 0.4;
+				item.alpha = 0.3;
 			bullShit++;
 		}
 
