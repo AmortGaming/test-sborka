@@ -125,15 +125,15 @@ class StoryMenuState extends MusicBeatState
 			grpWeekCharacters.add(new StoryCharacter((FlxG.width * 0.25) * (1 + char) - 150, 70, daWeek.characters[char]));
 
 		txtTracklist = new FlxText(FlxG.width * 0.05, 500, 0, "Tracks", 32);
-		txtTracklist.setFormat(Paths.font("vcr.ttf"), 32, 0xFFe55777, CENTER);
+		txtTracklist.setFormat(Paths.font("score.ttf"), 32, 0xFFe55777, CENTER);
 		add(txtTracklist);
 
 		scoreText = new FlxText(10, 10, 0, "SCORE: 49324858", 36);
-		scoreText.setFormat(Paths.font("vcr.ttf"), 32);
+		scoreText.setFormat(Paths.font("score.ttf"), 32);
 		add(scoreText);
 
 		txtWeekTitle = new FlxText(FlxG.width * 0.7, 10, 0, "", 32);
-		txtWeekTitle.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, RIGHT);
+		txtWeekTitle.setFormat(Paths.font("score.ttf"), 32, FlxColor.WHITE, RIGHT);
 		txtWeekTitle.alpha = 0.7;
 		add(txtWeekTitle);
 
