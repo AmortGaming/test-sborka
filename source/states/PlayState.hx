@@ -130,20 +130,6 @@ class PlayState extends MusicBeatState
 		{
 			switch (Paths.formatName(SONG.song.toLowerCase()))
 			{
-				case 'spookeez' | 'south' | 'monster':
-					SONG.stage = 'spooky';
-				case 'pico' | 'blammed' | 'philly':
-					SONG.stage = 'philly';
-				case 'milf' | 'satin-panties' | 'high':
-					SONG.stage = 'limo';
-				case 'cocoa' | 'eggnog':
-					SONG.stage = 'mall';
-				case 'winter-horrorland':
-					SONG.stage = 'mallEvil';
-				case 'senpai' | 'roses':
-					SONG.stage = 'school';
-				case 'thorns':
-					SONG.stage = 'schoolEvil';
 				case 'ugh' | 'guns' | 'stress':
 					SONG.stage = 'tank';
 				case 'bruh' | 'obama' | 'negar':
