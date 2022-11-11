@@ -30,7 +30,6 @@ class FreeplayState extends MusicBeatState
 	private var curDifficulty:Int = 1;
 	private var scoreText:FlxText;
 	private var diffText:FlxText;
-	private var rankText:FlxText;
 
 	private var lerpScore:Float = 0;
 	private var lerpAccuracy:Float = 0;
