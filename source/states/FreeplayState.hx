@@ -113,15 +113,15 @@ class FreeplayState extends MusicBeatState
 		add(scoreBG);
 
 		scoreText = new FlxText(FlxG.width * 0.7, scoreBG.y + 5, 0, '', 32);
-		scoreText.setFormat(Paths.font('vcr.ttf'), 32, FlxColor.WHITE, RIGHT);
+		scoreText.setFormat(Paths.font('score.ttf'), 32, FlxColor.WHITE, RIGHT);
 		add(scoreText);
 
 		rankText = new FlxText(scoreText.x, scoreText.y + 36, 0, '', 24);
-		rankText.setFormat(Paths.font('vcr.ttf'), 24, FlxColor.WHITE, RIGHT);
+		rankText.setFormat(Paths.font('score.ttf'), 24, FlxColor.WHITE, RIGHT);
 		add(rankText);
 
 		diffText = new FlxText(scoreText.x, rankText.y + 28, 0, '', 24);
-		diffText.setFormat(Paths.font('vcr.ttf'), 24, FlxColor.WHITE, RIGHT);
+		diffText.setFormat(Paths.font('score.ttf'), 24, FlxColor.WHITE, RIGHT);
 		add(diffText);
 
 		changeSelection();
@@ -230,7 +230,7 @@ class FreeplayState extends MusicBeatState
 		intendedAccuracy = HighScore.getScore(songs[curSelected].name, curDifficulty).accuracy;
 
 		for (i in 0...iconArray.length)
-			iconArray[i].alpha = 0.6;
+			iconArray[i].alpha = 0.3;
 
 		iconArray[curSelected].alpha = 1;
 
@@ -240,7 +240,7 @@ class FreeplayState extends MusicBeatState
 			item.targetY = bullShit - curSelected;
 			bullShit++;
 
-			item.alpha = 0.6;
+			item.alpha = 0.3;
 			if (item.targetY == 0)
 				item.alpha = 1;
 		}
