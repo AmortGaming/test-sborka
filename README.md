@@ -1,4 +1,4 @@
-![](Chain-Saw-Engine-Logo.png)
+![](icon.png)
 ### light-engine
 
 Still unfinished
